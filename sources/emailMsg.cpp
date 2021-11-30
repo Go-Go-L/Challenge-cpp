@@ -1,4 +1,4 @@
-#include "emailMsg.h"
+#include "../headers/emailMsg.h"
 #include <string>
 #include <iostream>
 unsigned int emailMsg::staticid = 1;  

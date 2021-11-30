@@ -1,7 +1,7 @@
-#include "msgManager.h"
-#include "message.h"
-#include "emailMsg.h"
-#include "mobileMsg.h"
+#include "../headers/msgManager.h"
+#include "../headers/message.h"
+#include "../headers/emailMsg.h"
+#include "../headers/mobileMsg.h"
 #include <fstream>
 void msgManager::addUser(const user& us)
 {

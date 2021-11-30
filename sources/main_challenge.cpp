@@ -1,9 +1,9 @@
 #include <iostream>
 #include <fstream>
-#include  "user.h"
-#include "emailMsg.h"
-#include "mobileMsg.h"
-#include "msgManager.h"
+#include  "../headers/user.h"
+#include "../headers/emailMsg.h"
+#include "../headers/mobileMsg.h"
+#include "../headers/msgManager.h"
 #include <sstream>
 using namespace std;
 
@@ -12,7 +12,7 @@ void partB();
 void partC();
 
 int main() {
-    /*cout << "Parte A" << endl << endl;
+    cout << "Parte A" << endl << endl;
 
     user u1("Maria", "m@ua.pt", "+351234370500");
     cout << u1 << endl;
@@ -57,11 +57,11 @@ int main() {
     cout << m2 << endl;
 
     mobileMsg m3(m2);
-    cout << "m3 id: " << m3.getId() << " and type " << m3.getType() << endl;*/
+    cout << "m3 id: " << m3.getId() << " and type " << m3.getType() << endl;
 
     //partB();
 
-    partC();
+    //partC();
 
     return 0;
 }
