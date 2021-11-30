@@ -6,58 +6,15 @@
 #include "../headers/msgManager.h"
 #include <sstream>
 using namespace std;
+void partA();
 
 void partB();
 
 void partC();
 
 int main() {
-    cout << "Parte A" << endl << endl;
 
-    user u1("Maria", "m@ua.pt", "+351234370500");
-    cout << u1 << endl;
-
-    user u2;
-    cout << "new user (name email mobile)? ";
-    cin >> u2;
-    cout << u2 << endl;
-
-    user u3(u1);
-    cout << u3 << endl;
-    u3.setname("Manuel"); u3.setemail("mm@ua.pt"); u3.setmobile("+351234370522");
-    cout << u3.getname() << " ; " << u3.getemail() << " ; " << u3.getmobile() << endl;
-
-    if(u1 < u3) // comparison by email
-        cout << "first is " << u1 << endl;
-    else
-        cout << "first is " << u3 << endl;
-
-    cout <<"------------------------------------------------" <<  endl;
-
-    emailMsg e1("The PpO exam is today!", "m@ua.pt", "mm@ua.pt");
-    cout << e1 << endl;
-
-    emailMsg e2;
-    string dummy;
-    std::getline(cin, dummy); // remove any lost \n
-    cout << "new email (first the content in one line, then the from and to addresses)? ";
-    cin >> e2;
-    cout << e2 << endl;
-
-    emailMsg e3(e2);
-    cout << "e3 id: " << e3.getId() << endl;
-
-    mobileMsg m1("The PpO exam is indeed today!", "+351234370500", "+351234370522");
-    cout << m1 << endl;
-
-    mobileMsg m2;
-    std::getline(cin, dummy); // remove any lost \n
-    cout << "new mobile (first the content in one line, then the from and to mobiles)? ";
-    cin >> m2;
-    cout << m2 << endl;
-
-    mobileMsg m3(m2);
-    cout << "m3 id: " << m3.getId() << " and type " << m3.getType() << endl;
+    partA();
 
     //partB();
 
@@ -140,4 +97,54 @@ void partC(){
 
    std::cout << m << endl;    
 
+}
+
+void partA()
+{
+cout << "Parte A" << endl << endl;
+
+user u1("Maria", "m@ua.pt", "+351234370500");
+cout << u1 << endl;
+
+user u2;
+cout << "new user (name email mobile)? ";
+cin >> u2;
+cout << u2 << endl;
+
+user u3(u1);
+cout << u3 << endl;
+u3.setname("Manuel"); u3.setemail("mm@ua.pt"); u3.setmobile("+351234370522");
+cout << u3.getname() << " ; " << u3.getemail() << " ; " << u3.getmobile() << endl;
+
+if(u1 < u3) // comparison by email
+    cout << "first is " << u1 << endl;
+else
+    cout << "first is " << u3 << endl;
+
+cout <<"------------------------------------------------" <<  endl;
+
+emailMsg e1("The PpO exam is today!", "m@ua.pt", "mm@ua.pt");
+cout << e1 << endl;
+
+emailMsg e2;
+string dummy;
+std::getline(cin, dummy); // remove any lost \n
+cout << "new email (first the content in one line, then the from and to addresses)? ";
+cin >> e2;
+cout << e2 << endl;
+
+emailMsg e3(e2);
+cout << "e3 id: " << e3.getId() << endl;
+
+mobileMsg m1("The PpO exam is indeed today!", "+351234370500", "+351234370522");
+cout << m1 << endl;
+
+mobileMsg m2;
+std::getline(cin, dummy); // remove any lost \n
+cout << "new mobile (first the content in one line, then the from and to mobiles)? ";
+cin >> m2;
+cout << m2 << endl;
+
+mobileMsg m3(m2);
+cout << "m3 id: " << m3.getId() << " and type " << m3.getType() << endl;
 }
