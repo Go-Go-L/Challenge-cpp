@@ -28,7 +28,7 @@ std::string emailMsg::getsrc(){return srcAddr;}
 std::string emailMsg::getdst(){return dstAddr;}
 std::ostream &operator << (std::ostream & os ,emailMsg & message)
 {
-    os  << "Message: " <<message.getbody()<<"\n Source: "<<message.getsrc()<<"\n Dest: "<<message.getdst()<<"\n Id: "<<message.getId();
+    os  << "Message:" <<message.getbody()<<"\n Source: "<<message.getsrc()<<"\n Dest: "<<message.getdst()<<"\n Id: "<<message.getId();
     return os;
 }
 
@@ -37,9 +37,7 @@ std::istream &operator >> (std::istream & is , emailMsg &message)
 {
     std::string bdy, src, dst;
     std::getline(is ,bdy );
-    is >> src >> dst;
-    message.setbody(bdy);
-    message.setdst(dst);
-    message.setsrc(src);
+    is >> message.srcAddr >> message.dstAddr;
+    message.body = bdy;
     return is;
 }

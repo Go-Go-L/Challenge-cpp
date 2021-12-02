@@ -18,6 +18,6 @@ public:
     void setbody(std::string);
     void setsrc(std::string);
     void setdst(std::string);
+    friend std::istream& operator>>(std::istream&, emailMsg&);
+    friend std::ostream& operator<<(std::ostream&, emailMsg&);
 };
-std::istream& operator>>(std::istream&, emailMsg&);
-std::ostream& operator<<(std::ostream&, emailMsg&);
