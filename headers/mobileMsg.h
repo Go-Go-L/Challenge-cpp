@@ -20,6 +20,6 @@ class mobileMsg : public msg
         void setbody(std::string);
         void setsrc(std::string);
         void setdst(std::string);
+        friend std::istream& operator>>(std::istream&, mobileMsg&);
+        friend std::ostream& operator<<(std::ostream&, mobileMsg&);
 };
-std::istream& operator>>(std::istream&, mobileMsg&);
-std::ostream& operator<<(std::ostream&, mobileMsg&);

@@ -27,7 +27,7 @@ std::string mobileMsg::getType(){return "Mobile";}
 
 std::ostream &operator << (std::ostream & os , mobileMsg & message)
 {
-    os  << "Message: " <<message.getbody()<<"\n Source: "<<message.getsrc()<<"\n Dest: "<<message.getdst()<<"\n Id: "<<message.getId();
+    os  << "Message: " <<message.body<<"\n Source: "<<message.srcPhoneNo<<"\n Dest: "<<message.dstPhoneNo<<"\n Id: "<<message.id;
     return os;
 }
 
@@ -36,9 +36,6 @@ std::istream &operator >> (std::istream & is , mobileMsg &message)
 {
     std::string bdy, src, dst;
     std::getline(is ,bdy );
-    is >> src >> dst;
-    message.setbody(bdy);
-    message.setdst(dst);
-    message.setsrc(src);
+    is >> message.srcPhoneNo >> message.dstPhoneNo;
     return is;
 }
