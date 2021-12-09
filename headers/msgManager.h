@@ -18,5 +18,5 @@ public:
     void addMsg(msg* );
     void getEmailsFrom(std::string ) const;
     void saveOnFile(std::string filename);
+    friend std::ostream& operator<<(std::ostream&, msgManager&);
 };
-std::ostream& operator<<(std::ostream&, msgManager&);
