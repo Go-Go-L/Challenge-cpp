@@ -21,8 +21,8 @@ mobileMsg::mobileMsg()
 void mobileMsg::setbody(std::string bd){   body = bd;}
 void mobileMsg::setsrc(std::string src){srcPhoneNo = src;}
 void mobileMsg::setdst(std::string dst){dstPhoneNo = dst;}
-std::string mobileMsg::getsrc(){return srcPhoneNo;}
-std::string mobileMsg::getdst(){return dstPhoneNo;}
+std::string mobileMsg::getsrc()const {return srcPhoneNo;}
+std::string mobileMsg::getdst()const{return dstPhoneNo;}
 std::string mobileMsg::getType(){return "Mobile";}
 
 std::ostream &operator << (std::ostream & os , mobileMsg & message)

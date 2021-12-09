@@ -12,8 +12,8 @@ private:
 public:
     emailMsg(std::string body, std::string srcAddr, std::string dstAddr);
     emailMsg();
-    std::string getsrc() override; //{return srcAddr;};
-    std::string getdst() override;
+    std::string getsrc() const override; //{return srcAddr;};
+    std::string getdst() const override;
     std::string getType() override;
     void setbody(std::string);
     void setsrc(std::string);

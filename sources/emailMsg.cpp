@@ -24,8 +24,8 @@ std::string emailMsg::getType(){return "Email";}
 void emailMsg::setbody(std::string bd){   body = bd;}
 void emailMsg::setsrc(std::string src){srcAddr = src;}
 void emailMsg::setdst(std::string dst){dstAddr = dst;}
-std::string emailMsg::getsrc(){return srcAddr;}
-std::string emailMsg::getdst(){return dstAddr;}
+std::string emailMsg::getsrc()const {return srcAddr;}
+std::string emailMsg::getdst()const {return dstAddr;}
 std::ostream &operator << (std::ostream & os ,emailMsg & message)
 {
     os  << "Message:" <<message.getbody()<<"\n Source: "<<message.getsrc()<<"\n Dest: "<<message.getdst()<<"\n Id: "<<message.getId();

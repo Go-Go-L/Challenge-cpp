@@ -14,8 +14,8 @@ class mobileMsg : public msg
     public:
         mobileMsg(std::string body, std::string srcPhoneNO, std::string dstPhone);
         mobileMsg();
-        std::string getsrc() override; //{return srcPhoneNo;};
-        std::string getdst() override;
+        std::string getsrc() const override; //{return srcPhoneNo;};
+        std::string getdst() const override;
         std::string getType() override;
         void setbody(std::string);
         void setsrc(std::string);
