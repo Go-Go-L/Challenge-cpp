@@ -5,14 +5,14 @@
 class emailMsg : public msg
 {
 private:
-    unsigned int static staticid ;
-    std::string srcAddr;
-    std::string dstAddr;
+    unsigned int static _staticId ;
+    std::string _srcAddr;
+    std::string _dstAddr;
 
 public:
-    emailMsg(std::string body, std::string srcAddr, std::string dstAddr);
+    emailMsg(std::string _body, std::string _srcAddr, std::string _dstAddr);
     emailMsg();
-    std::string getsrc() const override; //{return srcAddr;};
+    std::string getsrc() const override; //{return _srcAddr;};
     std::string getdst() const override;
     std::string getType() override;
     void setbody(std::string);

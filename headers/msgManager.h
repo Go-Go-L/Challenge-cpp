@@ -10,8 +10,8 @@
 class msgManager
 {
 public:
-    std::map <std::string , user> user_m;
-    std::vector<std::unique_ptr<msg>> ptr_vec;
+    std::map <std::string , user> _userMap;
+    std::vector<std::unique_ptr<msg>> _ptrVec;
 
 public:
     void addUser(const user&);

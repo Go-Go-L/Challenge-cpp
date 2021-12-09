@@ -12,7 +12,7 @@ class mobileMsg : public msg
         std::string dstPhoneNo;
 
     public:
-        mobileMsg(std::string body, std::string srcPhoneNO, std::string dstPhone);
+        mobileMsg(std::string _body, std::string srcPhoneNO, std::string dstPhone);
         mobileMsg();
         std::string getsrc() const override; //{return srcPhoneNo;};
         std::string getdst() const override;

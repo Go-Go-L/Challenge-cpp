@@ -1,6 +1,6 @@
 # Challenge project for the "C++ Essential Training" Formation Course.
 
-This program is a message manager. There are two message types: **e-mail** and **mobile**. Each message has an associated 'sender' and 'receiver' which is a user object type (phone no. or e-mail address in each case) as well as message body and ID.
+This program is a message manager. There are two message types: **e-mail** and **mobile**. Each message has an associated 'sender' and 'receiver' which is a user object type (phone no. or e-mail address in each case) as well as message _body and ID.
 
 The most important aspect of this program is a MsgManager class. This class stores a list of messages sorting them by ID. It has addmessage and retrievemessage methods and it can print to a formatted file.
 
